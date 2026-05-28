@@ -1,5 +1,26 @@
 -- TCL: Transaction control Language
--- Transactions: Group of multiple SQL statements that can be executed together and to manage this we have TCL
+-- Transactions: Group of multiple SQL statements which work as a UNIT that can be executed together and to manage this we have TCL
+-- UNIT :  "UNIT" refers to the Transaction itself—the fundamental logical unit of work. It consists of one or more SQL statements 
+-- (usually DML operations like INSERT, UPDATE, or DELETE) that must either succeed completely or fail completely to preserve data integrity.
+
+-- tcl commands insurses that my data is correct 
+-- 4 ACID properties foundation of Transaction
+
+-- 1 Atomicity -- all work is completly done or either completly not done
+
+-- 2 Consistency -- step by step execution always moves one step to another 
+
+-- 3 Isolation -- each and every work is isolated 
+
+-- 4 Durability -- data is always permalately saved
+
+-- when a Transaction is start?
+--      first when we write the keyword Start Transaction also when we do DML operations because during that operations are in pending stage 
+--      second when we set autocommit off
+
+
+-- transaction ends when we commit, rollback or we execute DDL statement
+
 use ctedb;
 select @@autocommit; -- auto save is on
 -- CTAS create table as select statement
